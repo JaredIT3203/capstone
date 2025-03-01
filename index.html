@@ -21,24 +21,14 @@
       }
 
       .title {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
         text-align: center;
         font-size: 36px;
         font-weight: bold;
         color: white;
         margin-top: 20px;
-      }
-      .short-msg {
-        max-width: 950px;
-        text-align: center;
-        font-size: 18;
-        color: white;
-      }
-      .short-msg:hover {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 22;
-        max-width: 1200px;
       }
 
       .login-container {
@@ -102,18 +92,19 @@
       .forgot-password a:hover {
         text-decoration: underline;
       }
+
+      .badge {
+        position: absolute;
+        border-radius: 8px;
+        right: 20px;
+        top: 2%;
+        width: 110;
+        height: 110;
+      }
     </style>
   </head>
   <body>
     <div class="title">Welcome to Robins AFB Software Training Environment</div>
-    <div class="short-msg">
-      <p>
-        The Robins Air Force Base Software Training Environment provides secure
-        access to essential tools and resources for Air Force personnel.
-      </p>
-
-      <p>Begin by logging in!</p>
-    </div>
 
     <div class="login-container">
       <h1>Login to Your Account</h1>
@@ -131,6 +122,11 @@
       <p class="forgot-password">
         <a href="password.html">Forgot Password?</a>
       </p>
+      <img
+        src="afbadge1.jpg"
+        alt="Air Force Badge"
+        class="badge"
+      />
     </div>
 
     <script>
