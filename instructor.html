@@ -123,31 +123,41 @@
         .coding-link:hover {
             background-color: #0056b3;
         }
-
-        .logout-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: red;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 16px;
-    }
         
-    .logout-btn:hover{
-      background-color: rgb(179, 0, 0);
-    }
-  
-    .logout-message {
-        position: fixed;
-        top: 10%;
-        color: white;
-        font-size: 20px;
-        text-align: center;
-    }
+        .logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: rgb(179, 0, 0);
+}
+
+.logout-message {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
     </style>
 </head>
 <body>
