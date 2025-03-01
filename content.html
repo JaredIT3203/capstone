@@ -88,10 +88,41 @@
             background: #0056b3;
         }
 
+        .logout-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+        
+    .logout-btn:hover{
+      background-color: rgb(179, 0, 0);
+    }
+  
+    .logout-message {
+        position: fixed;
+        top: 10%;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
     </style>
 </head>
 <body>
 
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    
+    <div id="logoutMessage" class="logout-message" style="display: none;">
+      You have successfully logged out. Redirecting to login page...
+    </div>
+    
     <div class="container">
         <div class="course-box">
             <img src="html.png" alt="HTML Course" class="course-image">
@@ -116,5 +147,14 @@
         <a href="instructor.html">Instructor Portal</a>
     </div>
 
+<script>
+        function logout() {
+        document.getElementById("logoutMessage").style.display = "block";
+
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 3000);
+    }
+    </script>    
 </body>
 </html>
