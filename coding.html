@@ -95,9 +95,99 @@
         font-size: 20px;
         text-align: center;
     }
+        .menu-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #1a7bdc;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      .menu-btn:hover {
+        background-color: #003366;
+      }
+
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 180px;
+        height: 99%;
+        background: white;
+        color: rgb(14, 13, 13);
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+        transition: 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .side-menu.open {
+        left: 0;
+      }
+
+      .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #444;
+      }
+
+      .menu-header h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .close-btn {
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .close-btn:hover {
+        color: #ff4d4d;
+      }
+
+      .side-menu a {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+        transition: 0.3s;
+      }
+
+      .side-menu a:hover {
+        background-color: #868383;
+        border-radius: 5px;
+      }
+        
     </style>
 </head>
 <body>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <div id="sideMenu" class="side-menu">
+      <div class="menu-header">
+        <h2>Menu</h2>
+        <span class="close-btn" onclick="toggleMenu()">×</span>
+      </div>
+      <a href="content.html">Content Page</a>
+      <a href="coding.html">Coding Page</a>
+      <a href="instructor.html">Instructor Page</a>
+    </div>
 
     <button class="logout-btn" onclick="logout()">Logout</button>
     
@@ -126,6 +216,10 @@
     </div>
     
     <script>
+        function toggleMenu() {
+        const menu = document.getElementById("sideMenu");
+        menu.classList.toggle("open");
+      } 
         function logout() {
         document.getElementById("logoutMessage").style.display = "block";
 
